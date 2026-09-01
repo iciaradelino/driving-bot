@@ -1,0 +1,51 @@
+name: Check Autius calendar
+
+on:
+  schedule:
+    # every 30 min, 05:00–21:59 utc (~07:00–23:59 spain)
+    - cron: "*/30 5-21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autius-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run checker
+        env:
+          AUTIUS_EMAIL: ${{ secrets.AUTIUS_EMAIL }}
+          AUTIUS_PASSWORD: ${{ secrets.AUTIUS_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: npm run check
+
+      - name: Commit state if changed
+        if: always()
+        run: |
+          if git diff --quiet -- state.json; then
+            echo "state.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git commit -m "chore: update calendar watcher state"
+          git push
