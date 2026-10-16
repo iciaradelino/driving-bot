@@ -1,16 +1,8 @@
 {
   "seenSlotIds": [
-    "2d3eb4b3-e161-494e-b2ef-cb1ba1e66bb2",
-    "5a5be50a-ce5d-4d2d-a81b-fcef3e998a1f",
-    "0adf31bb-0739-458f-bce1-bf1e844fc2d0",
-    "72ded3d3-a887-4952-9d55-8efd81daa91a",
-    "68dd22d6-c205-40aa-8d59-27637f3e0b40",
-    "e2c58824-ceac-4239-a741-b469450bff11",
-    "1a2dfe14-3762-4622-a182-be3c8a2ba3c8",
-    "ce644e67-bc55-417f-9578-2ca905e84fec",
-    "b3339001-b1e4-4092-8712-986bbda1224d"
+    "1ebeaa1f-f78e-4c60-826d-a6ee68e13106"
   ],
-  "lastSuccessAt": "2026-10-16T09:38:14.353Z",
+  "lastSuccessAt": "2026-10-16T14:43:34.779Z",
   "consecutiveFailures": 0,
   "lastFailureAlertAt": "2026-09-01T09:51:43.737Z"
 }
