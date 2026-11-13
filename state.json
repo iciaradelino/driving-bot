@@ -1,6 +1,10 @@
 {
-  "seenSlotIds": [],
-  "lastSuccessAt": "2026-11-13T12:57:28.934Z",
+  "seenSlotIds": [
+    "b53f4a3d-8ff8-4c69-962c-ba0de8a4bb5d",
+    "70a78a47-7507-476f-8a2d-6a9f63e026f8",
+    "1e58e63a-a55a-4eb0-bf9a-a08d293d84b2"
+  ],
+  "lastSuccessAt": "2026-11-13T20:27:16.840Z",
   "consecutiveFailures": 0,
   "lastFailureAlertAt": "2026-11-12T01:58:56.805Z"
 }
