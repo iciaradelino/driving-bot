@@ -1,8 +1,9 @@
 {
   "seenSlotIds": [
-    "f27660cf-7128-4276-ba22-17808c351780"
+    "c7eaeb74-ded4-4d2a-897b-302b8d5db09e",
+    "5cca3191-4c05-49ac-a2b1-91d3a9e5d485"
   ],
-  "lastSuccessAt": "2026-11-18T21:46:34.267Z",
+  "lastSuccessAt": "2026-11-19T14:15:17.536Z",
   "consecutiveFailures": 0,
   "lastFailureAlertAt": "2026-11-12T01:58:56.805Z"
 }
